@@ -1,0 +1,275 @@
+* {
+  font-family: IBM Plex Sans, sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 50px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  margin-bottom: 50px;
+}
+
+h2 {
+  margin-bottom: 8px;
+}
+
+/* Input */
+
+.field {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.field.is-disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.field__input {
+  display: block;
+  width: 100%;
+  outline: 0;
+  border: 0;
+  border-radius: 4px;
+  background: #f8fafc;
+  padding: 12px;
+  color: #3b4256;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 144%;
+  letter-spacing: 0.16px;
+  border: 1px solid transparent;
+  transition: 0.2s all ease-in;
+}
+
+.field__input::placeholder {
+  color: #b8bcca;
+}
+
+.field__input:focus {
+  border-color: #0048d9;
+}
+
+.field__name {
+  color: #6f7482;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 144%;
+  letter-spacing: 0.16px;
+  margin-bottom: 2px;
+}
+
+.field__req {
+  color: #ed0131;
+}
+
+/* Textarea */
+
+.field__textarea {
+  display: block;
+  width: 100%;
+  outline: 0;
+  border: 0;
+  padding: 12px;
+  border-radius: 4px;
+  background: #f8fafc;
+  min-height: 139px;
+  max-height: 300px;
+  resize: vertical;
+  color: #3b4256;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 143%;
+}
+
+.field__textarea::placeholder {
+  color: #b8bcca;
+}
+
+/* Select */
+
+.field__select {
+  display: block;
+  width: 100%;
+  outline: 0;
+  border: 0;
+  padding: 12px;
+  border-radius: 4px;
+  background: #f8fafc;
+}
+
+/* Chekbox */
+
+.chk {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 10px;
+}
+
+.chk__input {
+  display: none;
+}
+
+.chk__input:checked ~ .chk__chek {
+  background: #3b4256;
+}
+
+.chk__input:checked ~ .chk__chek::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.chk__chek {
+  width: 21px;
+  height: 21px;
+  border: 2px solid #3b4256;
+  border-radius: 4px;
+  background: transparent;
+  transition: 0.2s all ease-in;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chk__chek::before {
+  content: "\2713";
+  color: #fff;
+  opacity: 0;
+  transform: scale(0);
+  transition: 0.2s all ease-in;
+}
+
+.chk__text {
+  color: #3b4256;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+/* Radio */
+
+.radio {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 10px;
+}
+
+.radio__input {
+  display: none;
+}
+
+.radio__input:checked ~ .radio__chek::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.radio__chek {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #3b4256;
+  border-radius: 50%;
+  background: transparent;
+  transition: 0.2s all ease-in;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.radio__chek::before {
+  content: "";
+  background: #3b4256;
+  opacity: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 0.2s all ease-in;
+}
+
+.radio__text {
+  color: #3b4256;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+/* Button */
+
+button {
+  display: inline-block;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  padding: 12px 24px;
+  border-radius: 4px;
+  background: lime;
+  margin-top: 20px;
+}
+
+.btn.is-disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Switch */
+
+.switch {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 10px;
+  }
+  
+  .switch__input {
+    display: none;
+  }
+  
+  .switch__input:checked ~ .switch__chek {
+    background: lime;
+  }
+  
+  .switch__input:checked ~ .switch__chek::before {
+    transform: translateX(20px);
+  }
+  
+  .switch__chek {
+    width: 51px;
+    height: 31px;
+    border-radius: 25px;
+    background: #E2E7ED;
+    position: relative;
+    transition: 0.2s all ease-in;
+  }
+  
+  .switch__chek::before {
+    content: "";
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: 0.2s all ease-in;
+  }
+  
+  .switch__text {
+    color: #3b4256;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 140%;
+  }
+  

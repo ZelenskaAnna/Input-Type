@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Form Builder</title>
+</head>
+
+<body>
+    <h1>Forms</h1>
+
+    <form>
+        <h2>Text Input</h2>
+        <label class="field">
+            <span class="field__name">Label <span class="field__req">*</span></span>
+            <input class="field__input" required type="text" placeholder="Enter your name">
+        </label>
+        <h2>Textarea</h2>
+        <label class="field">
+            <span class="field__name">Textarea</span>
+            <textarea class="field__textarea" placeholder="Enter your text"></textarea>
+        </label>
+        <h2>Select</h2>
+        <label class="field">
+            <span class="field__name">Select</span>
+            <select class="field__select">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+        </label>
+        <label class="field">
+            <span class="field__name">Select</span>
+            <select class="field__select">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+        </label>
+
+        <div class="row">
+            <label class="chk">
+                <input class="chk__input" type="checkbox">
+                <span class="chk__chek"></span>
+                <span class="chk__text">Item</span>
+            </label>
+            <label class="chk">
+                <input class="chk__input" type="checkbox">
+                <span class="chk__chek"></span>
+                <span class="chk__text">Item</span>
+            </label>
+            <label class="radio">
+                <input class="radio__input" name="user" type="radio">
+                <span class="radio__chek"></span>
+                <span class="radio__text">Item</span>
+            </label>
+            <label class="radio">
+                <input class="radio__input" name="user" type="radio">
+                <span class="radio__chek"></span>
+                <span class="radio__text">Item</span>
+            </label>
+            <label for="switch" class="switch">
+                <input class="switch__input" id="switch" type="checkbox">
+                <span class="switch__chek"></span>
+                <span class="switch__text">Off/On</span>
+            </label>
+        </div>
+        <button class="btn">Send</button>
+    </form>
+</body>
+
+</html>
